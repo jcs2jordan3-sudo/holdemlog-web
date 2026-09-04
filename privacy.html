@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개인정보처리방침 — HoldemLog</title>
+  <link rel="icon" href="/icon.png">
+  <style>
+    :root { --bg:#0F1512; --surface:#161d19; --line:#233129; --text:#e8ece9; --muted:#a9b2a7; --green:#3FE56C; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif; line-height:1.7; }
+    a { color:var(--green); }
+    .wrap { max-width:760px; margin:0 auto; padding:24px 20px 60px; }
+    h1 { font-size:26px; margin:8px 0 4px; }
+    .meta { color:var(--muted); font-size:14px; margin-bottom:28px; }
+    h2 { font-size:18px; margin:30px 0 8px; color:var(--green); }
+    table { width:100%; border-collapse:collapse; font-size:14px; margin:8px 0 12px; }
+    th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:var(--surface); }
+    ul { padding-left:20px; }
+    .back { font-size:14px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">← HoldemLog 홈</a>
+  <h1>개인정보처리방침</h1>
+  <div class="meta">시행일: 2026년 9월 4일 · 버전 1.0</div>
+
+  <p>HoldemLog(홀덤로그, 이하 "서비스")는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
+     이 방침은 서비스가 어떤 정보를 수집하고 어떻게 이용·보관·보호하는지 설명합니다.</p>
+
+  <h2>1. 수집하는 개인정보 항목과 방법</h2>
+  <table>
+    <tr><th>구분</th><th>항목</th><th>수집 시점</th></tr>
+    <tr><td>회원 가입</td><td>이메일 주소, 비밀번호(암호화 저장), 닉네임</td><td>가입 시 이용자가 직접 입력</td></tr>
+    <tr><td>서비스 이용 중 생성</td><td>핸드 기록(카드·액션·메모·태그), 세션·수익 기록(장소·바이인·결과), 게시글·댓글·좋아요·첨부 사진, 신고 내용</td><td>이용자가 기록·작성할 때</td></tr>
+    <tr><td>대회 등록(호스트)</td><td>펍 이름, 연락처, 주소, 오픈채팅 링크, 포스터 이미지</td><td>호스트 검증 신청·대회 등록 시</td></tr>
+    <tr><td>자동 수집</td><td>기기 종류·OS 버전·앱 버전, 광고 식별자(ADID), 오류·접속 로그</td><td>앱 실행 시</td></tr>
+  </table>
+  <p>로그인하지 않은 게스트 상태에서는 기록이 기기 안에만 저장되며 서버로 전송되지 않습니다.</p>
+
+  <h2>2. 개인정보의 이용 목적</h2>
+  <ul>
+    <li>회원 식별, 로그인, 이메일 인증, 비밀번호 재설정</li>
+    <li>핸드·세션 기록의 저장과 여러 기기 간 동기화</li>
+    <li>AI 핸드 분석 결과 제공</li>
+    <li>커뮤니티 게시·댓글·핸드 공유 기능 제공, 신고 처리</li>
+    <li>대회 일정 게시와 호스트 검증</li>
+    <li>맞춤형이 아닌 일반 광고 게재, 서비스 안정성 확보와 부정 이용 방지</li>
+  </ul>
+
+  <h2>3. 보유 및 이용 기간</h2>
+  <p>개인정보는 회원 탈퇴(계정 삭제) 시 지체 없이 파기합니다. 계정을 삭제하면 서버에 저장된 핸드·세션·게시글·댓글·사진이 함께 삭제됩니다.
+     다만 관련 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다(예: 「통신비밀보호법」에 따른 접속 기록 3개월).</p>
+
+  <h2>4. 개인정보의 제3자 제공</h2>
+  <p>서비스는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 단, 이용자가 직접 "공개"로 설정한 핸드와 커뮤니티에 작성한 게시글·댓글·닉네임은 다른 이용자에게 표시됩니다.</p>
+
+  <h2>5. 개인정보 처리의 위탁과 국외 이전</h2>
+  <p>서비스 운영을 위해 아래 업체에 처리를 위탁하며, 일부는 국외에서 처리됩니다.</p>
+  <table>
+    <tr><th>수탁자</th><th>위탁 업무</th><th>이전 항목</th><th>국가</th></tr>
+    <tr><td>Supabase, Inc.</td><td>데이터베이스·인증·파일 저장(AWS 서울 리전)</td><td>제1항의 모든 항목</td><td>대한민국(서버), 미국(운영사)</td></tr>
+    <tr><td>Anthropic, PBC</td><td>AI 핸드 분석(이용자가 분석을 요청한 핸드 기록만 전송)</td><td>핸드 기록(카드·액션·메모). 이메일 등 식별정보는 전송하지 않음</td><td>미국</td></tr>
+    <tr><td>Google LLC (AdMob)</td><td>앱 내 광고 게재</td><td>광고 식별자, 기기 정보</td><td>미국</td></tr>
+    <tr><td>Resend, Inc.</td><td>인증·알림 이메일 발송</td><td>이메일 주소</td><td>미국</td></tr>
+  </table>
+  <p>Anthropic에 전송된 데이터는 Anthropic의 API 정책에 따라 모델 학습에 사용되지 않습니다.</p>
+
+  <h2>6. 이용자의 권리와 행사 방법</h2>
+  <ul>
+    <li>앱의 MY 탭에서 닉네임을 수정하고, 기록·게시글을 직접 삭제할 수 있습니다.</li>
+    <li>계정 삭제는 앱의 <b>MY → 계정 삭제</b>에서 즉시 처리됩니다. 자세한 절차는 <a href="/delete-account.html">계정 삭제 안내</a>를 참고하세요.</li>
+    <li>열람·정정·삭제·처리정지 요청은 아래 연락처로 보내 주시면 10일 이내에 처리합니다.</li>
+  </ul>
+
+  <h2>7. 안전성 확보 조치</h2>
+  <ul>
+    <li>비밀번호는 복호화할 수 없는 방식으로 암호화해 저장합니다.</li>
+    <li>모든 통신은 TLS로 암호화되며, 데이터베이스는 행 단위 접근 제어(RLS)로 본인 데이터만 접근하도록 제한합니다.</li>
+    <li>서버 접근 권한은 운영자에게만 부여하고 접근 키를 분리 보관합니다.</li>
+  </ul>
+
+  <h2>8. 아동의 개인정보</h2>
+  <p>서비스는 만 18세 이상을 대상으로 하며, 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 아동의 정보가 수집된 사실을 알게 되면 즉시 삭제합니다.</p>
+
+  <h2>9. 개인정보 보호책임자와 문의</h2>
+  <p>HoldemLog 운영자 · 이메일: <a href="mailto:jcs2jordan3@gmail.com">jcs2jordan3@gmail.com</a></p>
+  <p>개인정보 침해에 대한 신고·상담은 개인정보침해신고센터(privacy.kisa.or.kr, 118), 개인정보분쟁조정위원회(kopico.go.kr, 1833-6972)에서도 받을 수 있습니다.</p>
+
+  <h2>10. 방침의 변경</h2>
+  <p>이 방침이 바뀌면 시행 7일 전에 이 페이지와 앱 공지로 알립니다.</p>
+</div>
+</body>
+</html>
