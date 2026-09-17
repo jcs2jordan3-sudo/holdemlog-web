@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>개인정보처리방침 — HoldemLog</title>
+  <title>Privacy Policy — HoldemLog</title>
   <link rel="icon" href="/icon.png">
   <style>
     :root { --bg:#0F1512; --surface:#161d19; --line:#233129; --text:#e8ece9; --muted:#a9b2a7; --green:#3FE56C; }
@@ -17,81 +17,189 @@
     th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
     th { background:var(--surface); }
     ul { padding-left:20px; }
+    .top { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
     .back { font-size:14px; }
+    .lang { font-size:14px; display:flex; gap:6px; }
+    .lang a { padding:4px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--muted); }
+    .lang a[aria-current="true"] { color:var(--bg); background:var(--green); border-color:var(--green); }
+    .note { color:var(--muted); font-size:14px; }
+    /* 기본은 영어. #ko로 들어오면 한국어를 보여 준다 (JS 없이 동작) */
+    section { scroll-margin-top:120px; }  /* #ko·#en 이동 시 상단 언어 버튼이 가려지지 않게 */
+    #ko { display:none; }
+    #ko:target { display:block; }
+    #ko:target ~ #en { display:none; }
   </style>
 </head>
 <body>
 <div class="wrap">
-  <a class="back" href="/">← HoldemLog 홈</a>
-  <h1>개인정보처리방침</h1>
-  <div class="meta">버전 1.1 · 개정일: 2026년 9월 17일 · 시행일: 2026년 9월 24일 (이전 버전 1.0은 시행일까지 유효)</div>
+  <div class="top">
+    <a class="back" href="/">← HoldemLog</a>
+    <nav class="lang" aria-label="Language">
+      <a href="#en" data-lang="en" aria-current="true">English</a>
+      <a href="#ko" data-lang="ko">한국어</a>
+    </nav>
+  </div>
 
-  <p>HoldemLog(홀덤로그, 이하 "서비스")는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
-     이 방침은 서비스가 어떤 정보를 수집하고 어떻게 이용·보관·보호하는지 설명하며, Google Play와 Apple App Store를 통해 배포되는 HoldemLog 앱과 웹 서비스에 함께 적용됩니다.</p>
+  <section id="ko" lang="ko">
+    <h1>개인정보처리방침</h1>
+    <div class="meta">버전 1.1 · 개정일: 2026년 9월 17일 · 시행일: 2026년 9월 24일 (이전 버전 1.0은 시행일까지 유효)</div>
 
-  <h2>1. 수집하는 개인정보 항목과 방법</h2>
-  <table>
-    <tr><th>구분</th><th>항목</th><th>수집 시점</th></tr>
-    <tr><td>회원 가입</td><td>이메일 주소, 비밀번호(암호화 저장), 닉네임</td><td>가입 시 이용자가 직접 입력</td></tr>
-    <tr><td>서비스 이용 중 생성</td><td>핸드 기록(카드·액션·메모·태그), 세션·수익 기록(장소·바이인·결과), 게시글·댓글·좋아요·첨부 사진, 신고 내용</td><td>이용자가 기록·작성할 때</td></tr>
-    <tr><td>대회 등록(호스트)</td><td>펍 이름, 연락처, 주소, 오픈채팅 링크, 포스터 이미지</td><td>호스트 검증 신청·대회 등록 시</td></tr>
-    <tr><td>자동 수집</td><td>기기 종류·OS 버전·앱 버전, 광고 식별자(Android ADID, iOS IDFA/IDFV), 오류·접속 로그</td><td>앱 실행 시</td></tr>
-  </table>
-  <p>로그인하지 않은 게스트 상태에서는 기록이 기기 안에만 저장되며 서버로 전송되지 않습니다.</p>
+    <p>HoldemLog(홀덤로그, 이하 "서비스")는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
+       이 방침은 서비스가 어떤 정보를 수집하고 어떻게 이용·보관·보호하는지 설명하며, Google Play와 Apple App Store를 통해 배포되는 HoldemLog 앱과 웹 서비스에 함께 적용됩니다.</p>
 
-  <h2>2. 개인정보의 이용 목적</h2>
-  <ul>
-    <li>회원 식별, 로그인, 이메일 인증, 비밀번호 재설정</li>
-    <li>핸드·세션 기록의 저장과 여러 기기 간 동기화</li>
-    <li>AI 핸드 분석 결과 제공</li>
-    <li>커뮤니티 게시·댓글·핸드 공유 기능 제공, 신고 처리</li>
-    <li>대회 일정 게시와 호스트 검증</li>
-    <li>맞춤형이 아닌 일반 광고 게재, 서비스 안정성 확보와 부정 이용 방지</li>
-  </ul>
-  <p>서비스는 광고를 위해 이용자를 다른 앱이나 웹사이트에 걸쳐 추적하지 않습니다.
-     iOS에서는 앱 추적 투명성(ATT) 권한을 요청하지 않으며, 광고 식별자를 이용한 맞춤형 광고를 제공하지 않습니다.</p>
+    <h2>1. 수집하는 개인정보 항목과 방법</h2>
+    <table>
+      <tr><th>구분</th><th>항목</th><th>수집 시점</th></tr>
+      <tr><td>회원 가입</td><td>이메일 주소, 비밀번호(암호화 저장), 닉네임</td><td>가입 시 이용자가 직접 입력</td></tr>
+      <tr><td>서비스 이용 중 생성</td><td>핸드 기록(카드·액션·메모·태그), 세션·수익 기록(장소·바이인·결과), 게시글·댓글·좋아요·첨부 사진, 신고 내용</td><td>이용자가 기록·작성할 때</td></tr>
+      <tr><td>대회 등록(호스트)</td><td>펍 이름, 연락처, 주소, 오픈채팅 링크, 포스터 이미지</td><td>호스트 검증 신청·대회 등록 시</td></tr>
+      <tr><td>자동 수집</td><td>기기 종류·OS 버전·앱 버전, 광고 식별자(Android ADID, iOS IDFA/IDFV), 오류·접속 로그</td><td>앱 실행 시</td></tr>
+    </table>
+    <p>로그인하지 않은 게스트 상태에서는 기록이 기기 안에만 저장되며 서버로 전송되지 않습니다.</p>
 
-  <h2>3. 보유 및 이용 기간</h2>
-  <p>개인정보는 회원 탈퇴(계정 삭제) 시 지체 없이 파기합니다. 계정을 삭제하면 서버에 저장된 핸드·세션·게시글·댓글·사진이 함께 삭제됩니다.
-     다만 관련 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다(예: 「통신비밀보호법」에 따른 접속 기록 3개월).</p>
+    <h2>2. 개인정보의 이용 목적</h2>
+    <ul>
+      <li>회원 식별, 로그인, 이메일 인증, 비밀번호 재설정</li>
+      <li>핸드·세션 기록의 저장과 여러 기기 간 동기화</li>
+      <li>AI 핸드 분석 결과 제공</li>
+      <li>커뮤니티 게시·댓글·핸드 공유 기능 제공, 신고 처리</li>
+      <li>대회 일정 게시와 호스트 검증</li>
+      <li>맞춤형이 아닌 일반 광고 게재, 서비스 안정성 확보와 부정 이용 방지</li>
+    </ul>
+    <p>서비스는 광고를 위해 이용자를 다른 앱이나 웹사이트에 걸쳐 추적하지 않습니다.
+       iOS에서는 앱 추적 투명성(ATT) 권한을 요청하지 않으며, 광고 식별자를 이용한 맞춤형 광고를 제공하지 않습니다.</p>
 
-  <h2>4. 개인정보의 제3자 제공</h2>
-  <p>서비스는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 단, 이용자가 직접 "공개"로 설정한 핸드와 커뮤니티에 작성한 게시글·댓글·닉네임은 다른 이용자에게 표시됩니다.</p>
+    <h2>3. 보유 및 이용 기간</h2>
+    <p>개인정보는 회원 탈퇴(계정 삭제) 시 지체 없이 파기합니다. 계정을 삭제하면 서버에 저장된 핸드·세션·게시글·댓글·사진이 함께 삭제됩니다.
+       다만 관련 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다(예: 「통신비밀보호법」에 따른 접속 기록 3개월).</p>
 
-  <h2>5. 개인정보 처리의 위탁과 국외 이전</h2>
-  <p>서비스 운영을 위해 아래 업체에 처리를 위탁하며, 일부는 국외에서 처리됩니다.</p>
-  <table>
-    <tr><th>수탁자</th><th>위탁 업무</th><th>이전 항목</th><th>국가</th></tr>
-    <tr><td>Supabase, Inc.</td><td>데이터베이스·인증·파일 저장(AWS 서울 리전)</td><td>제1항의 모든 항목</td><td>대한민국(서버), 미국(운영사)</td></tr>
-    <tr><td>Anthropic, PBC</td><td>AI 핸드 분석(이용자가 분석을 요청한 핸드 기록만 전송)</td><td>핸드 기록(카드·액션·메모). 이메일 등 식별정보는 전송하지 않음</td><td>미국</td></tr>
-    <tr><td>Google LLC (AdMob)</td><td>앱 내 광고 게재</td><td>광고 식별자, 기기 정보</td><td>미국</td></tr>
-    <tr><td>Resend, Inc.</td><td>인증·알림 이메일 발송</td><td>이메일 주소</td><td>미국</td></tr>
-  </table>
-  <p>Anthropic에 전송된 데이터는 Anthropic의 API 정책에 따라 모델 학습에 사용되지 않습니다.</p>
+    <h2>4. 개인정보의 제3자 제공</h2>
+    <p>서비스는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 단, 이용자가 직접 "공개"로 설정한 핸드와 커뮤니티에 작성한 게시글·댓글·닉네임은 다른 이용자에게 표시됩니다.</p>
 
-  <h2>6. 이용자의 권리와 행사 방법</h2>
-  <ul>
-    <li>앱의 MY 탭에서 닉네임을 수정하고, 기록·게시글을 직접 삭제할 수 있습니다.</li>
-    <li>계정 삭제는 앱의 <b>MY → 계정 삭제</b>에서 즉시 처리됩니다. 자세한 절차는 <a href="/delete-account.html">계정 삭제 안내</a>를 참고하세요.</li>
-    <li>열람·정정·삭제·처리정지 요청은 아래 연락처로 보내 주시면 10일 이내에 처리합니다.</li>
-  </ul>
+    <h2>5. 개인정보 처리의 위탁과 국외 이전</h2>
+    <p>서비스 운영을 위해 아래 업체에 처리를 위탁하며, 일부는 국외에서 처리됩니다.</p>
+    <table>
+      <tr><th>수탁자</th><th>위탁 업무</th><th>이전 항목</th><th>국가</th></tr>
+      <tr><td>Supabase, Inc.</td><td>데이터베이스·인증·파일 저장(AWS 서울 리전)</td><td>제1항의 모든 항목</td><td>대한민국(서버), 미국(운영사)</td></tr>
+      <tr><td>Anthropic, PBC</td><td>AI 핸드 분석(이용자가 분석을 요청한 핸드 기록만 전송)</td><td>핸드 기록(카드·액션·메모). 이메일 등 식별정보는 전송하지 않음</td><td>미국</td></tr>
+      <tr><td>Google LLC (AdMob)</td><td>앱 내 광고 게재</td><td>광고 식별자, 기기 정보</td><td>미국</td></tr>
+      <tr><td>Resend, Inc.</td><td>인증·알림 이메일 발송</td><td>이메일 주소</td><td>미국</td></tr>
+    </table>
+    <p>Anthropic에 전송된 데이터는 Anthropic의 API 정책에 따라 모델 학습에 사용되지 않습니다.</p>
 
-  <h2>7. 안전성 확보 조치</h2>
-  <ul>
-    <li>비밀번호는 복호화할 수 없는 방식으로 암호화해 저장합니다.</li>
-    <li>모든 통신은 TLS로 암호화되며, 데이터베이스는 행 단위 접근 제어(RLS)로 본인 데이터만 접근하도록 제한합니다.</li>
-    <li>서버 접근 권한은 운영자에게만 부여하고 접근 키를 분리 보관합니다.</li>
-  </ul>
+    <h2>6. 이용자의 권리와 행사 방법</h2>
+    <ul>
+      <li>앱의 MY 탭에서 닉네임을 수정하고, 기록·게시글을 직접 삭제할 수 있습니다.</li>
+      <li>계정 삭제는 앱의 <b>MY → 계정 삭제</b>에서 즉시 처리됩니다. 자세한 절차는 <a href="/delete-account.html">계정 삭제 안내</a>를 참고하세요.</li>
+      <li>열람·정정·삭제·처리정지 요청은 아래 연락처로 보내 주시면 10일 이내에 처리합니다.</li>
+    </ul>
 
-  <h2>8. 아동의 개인정보</h2>
-  <p>서비스는 만 18세 이상을 대상으로 하며, 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 아동의 정보가 수집된 사실을 알게 되면 즉시 삭제합니다.</p>
+    <h2>7. 안전성 확보 조치</h2>
+    <ul>
+      <li>비밀번호는 복호화할 수 없는 방식으로 암호화해 저장합니다.</li>
+      <li>모든 통신은 TLS로 암호화되며, 데이터베이스는 행 단위 접근 제어(RLS)로 본인 데이터만 접근하도록 제한합니다.</li>
+      <li>서버 접근 권한은 운영자에게만 부여하고 접근 키를 분리 보관합니다.</li>
+    </ul>
 
-  <h2>9. 개인정보 보호책임자와 문의</h2>
-  <p>HoldemLog 운영자 · 이메일: <a href="mailto:jcs2jordan3@gmail.com">jcs2jordan3@gmail.com</a></p>
-  <p>개인정보 침해에 대한 신고·상담은 개인정보침해신고센터(privacy.kisa.or.kr, 118), 개인정보분쟁조정위원회(kopico.go.kr, 1833-6972)에서도 받을 수 있습니다.</p>
+    <h2>8. 아동의 개인정보</h2>
+    <p>서비스는 만 18세 이상을 대상으로 하며, 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 아동의 정보가 수집된 사실을 알게 되면 즉시 삭제합니다.</p>
 
-  <h2>10. 방침의 변경</h2>
-  <p>이 방침이 바뀌면 시행 7일 전에 이 페이지와 앱 공지로 알립니다.</p>
+    <h2>9. 개인정보 보호책임자와 문의</h2>
+    <p>HoldemLog 운영자 · 이메일: <a href="mailto:jcs2jordan3@gmail.com">jcs2jordan3@gmail.com</a></p>
+    <p>개인정보 침해에 대한 신고·상담은 개인정보침해신고센터(privacy.kisa.or.kr, 118), 개인정보분쟁조정위원회(kopico.go.kr, 1833-6972)에서도 받을 수 있습니다.</p>
+
+    <h2>10. 방침의 변경</h2>
+    <p>이 방침이 바뀌면 시행 7일 전에 이 페이지와 앱 공지로 알립니다.</p>
+  </section>
+
+  <section id="en" lang="en">
+    <h1>Privacy Policy</h1>
+    <div class="meta">Version 1.1 · Revised: September 17, 2026 · Effective: September 24, 2026 (Version 1.0 remains in effect until then)</div>
+    <p class="note">This English version is a translation of the Korean original. If the two versions differ, the Korean version prevails.</p>
+
+    <p>HoldemLog (the "Service") values your privacy and complies with applicable laws, including Korea's Personal Information Protection Act.
+       This policy explains what information the Service collects and how it is used, stored, and protected. It applies to the HoldemLog app distributed through Google Play and the Apple App Store, and to the web service.</p>
+
+    <h2>1. Information we collect and how</h2>
+    <table>
+      <tr><th>Category</th><th>Items</th><th>When collected</th></tr>
+      <tr><td>Account sign-up</td><td>Email address, password (stored encrypted), nickname</td><td>Entered by you when you sign up</td></tr>
+      <tr><td>Created while using the Service</td><td>Hand records (cards, actions, notes, tags), session and profit records (venue, buy-in, results), posts, comments, likes, attached photos, report details</td><td>When you record or write them</td></tr>
+      <tr><td>Tournament registration (hosts)</td><td>Venue name, contact number, address, open chat link, poster image</td><td>When you apply for host verification or register a tournament</td></tr>
+      <tr><td>Collected automatically</td><td>Device model, OS version, app version, advertising identifiers (Android ADID, iOS IDFA/IDFV), error and access logs</td><td>When the app runs</td></tr>
+    </table>
+    <p>If you use the app as a guest without signing in, your records are stored only on your device and are not sent to our servers.</p>
+
+    <h2>2. How we use information</h2>
+    <ul>
+      <li>Identifying members, signing in, verifying email addresses, and resetting passwords</li>
+      <li>Storing hand and session records and syncing them across your devices</li>
+      <li>Providing AI hand analysis results</li>
+      <li>Providing community posts, comments, and hand sharing, and handling reports</li>
+      <li>Publishing tournament schedules and verifying hosts</li>
+      <li>Showing general, non-personalized ads, keeping the Service stable, and preventing abuse</li>
+    </ul>
+    <p>The Service does not track you across other apps or websites for advertising.
+       On iOS, the app does not request App Tracking Transparency (ATT) permission and does not show personalized ads based on advertising identifiers.</p>
+
+    <h2>3. How long we keep information</h2>
+    <p>We destroy your personal information without delay when you delete your account. Deleting your account also deletes the hands, sessions, posts, comments, and photos stored on our servers.
+       Where applicable law requires us to keep certain information, we keep it for the required period (for example, access logs for 3 months under Korea's Protection of Communications Secrets Act).</p>
+
+    <h2>4. Sharing with third parties</h2>
+    <p>We do not provide your personal information to third parties. However, hands you set to "public" and the posts, comments, and nickname you publish in the community are visible to other users.</p>
+
+    <h2>5. Processors and international transfers</h2>
+    <p>We use the following companies to process data on our behalf to run the Service. Some of this processing takes place outside Korea.</p>
+    <table>
+      <tr><th>Processor</th><th>Task</th><th>Data transferred</th><th>Country</th></tr>
+      <tr><td>Supabase, Inc.</td><td>Database, authentication, and file storage (AWS Seoul region)</td><td>All items listed in Section 1</td><td>Republic of Korea (servers), United States (operator)</td></tr>
+      <tr><td>Anthropic, PBC</td><td>AI hand analysis (only the hands you ask to analyze are sent)</td><td>Hand records (cards, actions, notes). Identifying information such as your email address is not sent</td><td>United States</td></tr>
+      <tr><td>Google LLC (AdMob)</td><td>In-app advertising</td><td>Advertising identifier, device information</td><td>United States</td></tr>
+      <tr><td>Resend, Inc.</td><td>Sending verification and notification emails</td><td>Email address</td><td>United States</td></tr>
+    </table>
+    <p>Under Anthropic's API policies, data sent to Anthropic is not used to train its models.</p>
+
+    <h2>6. Your rights</h2>
+    <ul>
+      <li>You can change your nickname in the app's MY tab and delete your own records and posts.</li>
+      <li>You can delete your account immediately in the app under <b>MY → Delete account</b>. For details, see the <a href="/delete-account.html">account deletion guide</a> (in Korean).</li>
+      <li>To request access to, correction or deletion of, or suspension of processing of your information, contact us using the details below. We will respond within 10 days.</li>
+    </ul>
+
+    <h2>7. Security measures</h2>
+    <ul>
+      <li>Passwords are stored using irreversible encryption.</li>
+      <li>All communication is encrypted with TLS, and the database uses row-level security (RLS) so that you can access only your own data.</li>
+      <li>Server access is limited to the operator, and access keys are stored separately.</li>
+    </ul>
+
+    <h2>8. Children's privacy</h2>
+    <p>The Service is intended for users aged 18 and over, and we do not knowingly collect personal information from children under 14. If we learn that a child's information has been collected, we will delete it immediately.</p>
+
+    <h2>9. Privacy officer and contact</h2>
+    <p>HoldemLog operator · Email: <a href="mailto:jcs2jordan3@gmail.com">jcs2jordan3@gmail.com</a></p>
+    <p>For privacy complaints or counseling in Korea, you can also contact the Personal Information Infringement Report Center (privacy.kisa.or.kr, 118) or the Personal Information Dispute Mediation Committee (kopico.go.kr, 1833-6972).</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>If this policy changes, we will announce it on this page and in the app 7 days before the change takes effect.</p>
+  </section>
 </div>
+<script>
+  // 언어 버튼 강조와 문서 제목·lang만 맞춘다 — 표시 전환 자체는 CSS(:target)가 한다
+  (function () {
+    var titles = { en: 'Privacy Policy — HoldemLog', ko: '개인정보처리방침 — HoldemLog' };
+    function sync() {
+      var lang = location.hash === '#ko' ? 'ko' : 'en';
+      document.documentElement.lang = lang;
+      document.title = titles[lang];
+      document.querySelectorAll('.lang a').forEach(function (a) {
+        a.setAttribute('aria-current', a.dataset.lang === lang ? 'true' : 'false');
+      });
+    }
+    window.addEventListener('hashchange', sync);
+    sync();
+  })();
+</script>
 </body>
 </html>
